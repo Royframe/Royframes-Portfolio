@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roy Frames | Video Editor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ff0055;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #ff0055;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #ff0055;
+      font-size: 1.8rem;
+    }
+    .services ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .services li {
+      background: #1e1e1e;
+      margin: 10px 0;
+      padding: 15px;
+      border-left: 4px solid #ff0055;
+    }
+    .contact a, .portfolio a {
+      color: #ff0055;
+      text-decoration: none;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 10px;
+    }
+    .testimonials blockquote {
+      background: #1e1e1e;
+      border-left: 4px solid #ff0055;
+      padding: 15px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .pricing .plan {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .pricing h3 {
+      color: #ff0055;
+    }
+    .pricing ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .pricing li {
+      margin: 10px 0;
+    }
+    .resume {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .resume a {
+      color: #ff0055;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #1e1e1e;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Roy Frames</h1>
+    <p>Professional Video Editing Services</p>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#pricing">Packages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="services" class="services">
+    <h2>What I Do</h2>
+    <ul>
+      <li>YouTube Video Editing</li>
+      <li>Wedding Video Editing</li>
+      <li>Wedding Teasers</li>
+      <li>Instagram Reels</li>
+      <li>Professional Cinematic Edits</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Sample Work</h2>
+    <p>Check out my latest edits on <a href="https://www.instagram.com/royframes__" target="_blank">Instagram @royframes__</a>.</p>
+  </section>
+
+  <section id="gallery" class="gallery-section">
+    <h2>Video Gallery</h2>
+    <div class="gallery">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+    </div>
+    <p style="text-align:center; margin-top: 10px;">Replace VIDEO_ID_x with your YouTube video IDs.</p>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>Client Testimonials</h2>
+    <blockquote>“Roy Frames turned our wedding footage into a masterpiece! Highly recommend.”</blockquote>
+    <blockquote>“Amazing transitions and music sync. Perfect for my YouTube content.”</blockquote>
+    <blockquote>“Professional, fast, and creative! Would hire again.”</blockquote>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <h2>Service Packages</h2>
+    <div class="plan">
+      <h3>Basic</h3>
+      <ul>
+        <li>1-2 min Reels</li>
+        <li>Basic transitions</li>
+        <li>Fast delivery</li>
+      </ul>
+      <p><strong>₹500</strong></p>
+    </div>
+    <div class="plan">
+      <h3>Standard</h3>
+      <ul>
+        <li>3-5 min Edits</li>
+        <li>Color correction</li>
+        <li>Music syncing</li>
+      </ul>
+      <p><strong>₹1,000</strong></p>
+    </div>
+    <div class="plan">
+      <h3>Premium</h3>
+      <ul>
+        <li>5+ min Cinematic Edits</li>
+        <li>Full storytelling</li>
+        <li>Custom audio</li>
+      </ul>
+      <p><strong>₹2,000+</strong></p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Phone: <a href="tel:+918447419956">+91 84474 19956</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/royframes__" target="_blank">@royframes__</a></p>
+    <div class="resume">
+      <p><a href="#">Download My Resume (Coming Soon)</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Roy Frames. All rights reserved.</p>
+  </footer>
+</body>
+</html>
