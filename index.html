@@ -4,16 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roy Frames | Video Editor</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
-      scroll-behavior: smooth;
-    }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0f0f0f;
       color: #fff;
+      scroll-behavior: smooth;
     }
     header {
       background-color: #1e1e1e;
@@ -39,19 +36,12 @@
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    section.reveal {
-      opacity: 1;
-      transform: translateY(0);
     }
     h2 {
       color: #ff0055;
       font-size: 1.8rem;
     }
-    .services ul, .pricing ul {
+    .services ul {
       list-style-type: none;
       padding: 0;
     }
@@ -99,6 +89,10 @@
     .pricing h3 {
       color: #ff0055;
     }
+    .pricing ul {
+      list-style-type: none;
+      padding: 0;
+    }
     .pricing li {
       margin: 10px 0;
     }
@@ -140,49 +134,149 @@
       font-size: 0.9rem;
       border-top: 1px solid #333;
     }
-    .top-btn {
+    /* Back to Top Button */
+    #topBtn {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background-color: #ff0055;
+      background: #ff0055;
       color: white;
       border: none;
-      padding: 10px 15px;
       border-radius: 50%;
-      font-size: 1.2rem;
+      padding: 12px 18px;
+      font-size: 20px;
       cursor: pointer;
+      display: none;
+      z-index: 100;
     }
-    .whatsapp {
+    /* Preloader */
+    #preloader {
+      background: #0f0f0f url('https://i.gifer.com/ZZ5H.gif') no-repeat center center;
+      background-size: 100px;
+      height: 100vh;
+      width: 100%;
       position: fixed;
-      bottom: 90px;
-      right: 30px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      font-size: 1.8rem;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
     }
   </style>
 </head>
-<body>
-  <div id="preloader" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#0f0f0f;z-index:9999;display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;">Loading...</div>
+<body onload="document.getElementById('preloader').style.display='none'">
+<div id="preloader"></div>
+
+  <header>
+    <h1>Roy Frames</h1>
+    <p>Professional Video Editing Services</p>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#pricing">Packages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="services" class="services">
+    <h2>What I Do</h2>
+    <ul>
+      <li>YouTube Video Editing</li>
+      <li>Wedding Video Editing</li>
+      <li>Wedding Teasers</li>
+      <li>Instagram Reels</li>
+      <li>Professional Cinematic Edits</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Sample Work</h2>
+    <p>Check out my latest edits on <a href="https://www.instagram.com/royframes__" target="_blank">Instagram @royframes__</a>.</p>
+  </section>
+
+  <section id="gallery" class="gallery-section">
+    <h2>Video Gallery</h2>
+    <div class="gallery">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+    </div>
+    <p style="text-align:center; margin-top: 10px;">Replace VIDEO_ID_x with your YouTube video IDs.</p>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>Client Testimonials</h2>
+    <blockquote>“Roy Frames turned our wedding footage into a masterpiece! Highly recommend.”</blockquote>
+    <blockquote>“Amazing transitions and music sync. Perfect for my YouTube content.”</blockquote>
+    <blockquote>“Professional, fast, and creative! Would hire again.”</blockquote>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <h2>Service Packages</h2>
+    <div class="plan">
+      <h3>Basic</h3>
+      <ul>
+        <li>1-2 min Reels</li>
+        <li>Basic transitions</li>
+        <li>Fast delivery</li>
+      </ul>
+      <p><strong>₹500</strong></p>
+    </div>
+    <div class="plan">
+      <h3>Standard</h3>
+      <ul>
+        <li>3-5 min Edits</li>
+        <li>Color correction</li>
+        <li>Music syncing</li>
+      </ul>
+      <p><strong>₹1,000</strong></p>
+    </div>
+    <div class="plan">
+      <h3>Premium</h3>
+      <ul>
+        <li>5+ min Cinematic Edits</li>
+        <li>Full storytelling</li>
+        <li>Custom audio</li>
+      </ul>
+      <p><strong>₹2,000+</strong></p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Phone: <a href="tel:+918447419956">+91 84474 19956</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/royframes__" target="_blank">@royframes__</a></p>
+    <form action="https://formspree.io/f/moqglbgo" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="resume">
+      <p><a href="#">Download My Resume (Coming Soon)</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Roy Frames. All rights reserved.</p>
+  </footer>
+
+  <button onclick="scrollToTop()" id="topBtn">&#8679;</button>
+
   <script>
-    window.addEventListener('load', () => document.getElementById('preloader').style.display = 'none');
-    window.addEventListener('scroll', () => {
-      document.querySelectorAll('section').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('reveal');
-        }
-      });
-    });
+    // Scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show button on scroll
+    window.onscroll = () => {
+      const btn = document.getElementById("topBtn");
+      btn.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+    };
   </script>
 
-  <!-- Existing content will be preserved -->
-
-  <a href="https://wa.me/918447419956" class="whatsapp" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="top-btn" title="Back to top">↑</button>
+  <!-- WhatsApp Chat -->
+  <a href="https://wa.me/918447419956" target="_blank" style="position: fixed; bottom: 80px; right: 30px; z-index: 100;">
+    <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="Chat on WhatsApp" width="50" height="50" />
+  </a>
 </body>
 </html>
